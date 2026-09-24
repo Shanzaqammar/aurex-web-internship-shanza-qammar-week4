@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Shanza Qammar | AUREX Week 4</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="app-header__title">Task Manager</h1>
+            <p class="app-header__subtitle">AUREX Week 4 — Shanza Qammar</p>
+        </header>
+
+        <!-- Input Form -->
+        <form class="task-form" id="taskForm">
+            <input 
+                type="text" 
+                id="taskInput" 
+                class="task-form__input" 
+                placeholder="Add a new task..." 
+                maxlength="100"
+            >
+            <button type="submit" class="task-form__btn">Add Task</button>
+        </form>
+
+        <!-- Validation Message -->
+        <p class="validation-msg" id="validationMsg"></p>
+
+        <!-- Filter Buttons -->
+        <div class="filters">
+            <button class="filters__btn filters__btn--active" data-filter="all">All</button>
+            <button class="filters__btn" data-filter="active">Active</button>
+            <button class="filters__btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Task Counter -->
+        <div class="task-counter">
+            <span id="taskCount">0 tasks</span>
+        </div>
+
+        <!-- Task List -->
+        <ul class="task-list" id="taskList">
+            <!-- Tasks will be added here by JavaScript -->
+        </ul>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <p class="empty-state__text">No tasks yet. Add your first task above! 🚀</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2026 Shanza Qammar | AUREX Full-Stack Internship</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
