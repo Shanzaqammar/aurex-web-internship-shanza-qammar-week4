@@ -190,8 +190,9 @@ function escapeHTML(str) {
 // =========================================
 // 13. FORM SUBMIT EVENT
 // =========================================
-taskForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// 13. FORM SUBMIT & ADD TASK EVENTS
+function handleAddTask(e) {
+    if (e) e.preventDefault();
 
     const taskText = taskInput.value.trim();
 
@@ -208,7 +209,12 @@ taskForm.addEventListener('submit', (e) => {
     addTask(taskText);
     taskInput.value = '';
     taskInput.focus();
-});
+}
+
+taskForm.addEventListener('submit', handleAddTask);
+
+const addTaskBtn = taskForm.querySelector('button');
+addTaskBtn.addEventListener('click', handleAddTask);
 
 // =========================================
 // 14. FILTER BUTTON EVENTS
