@@ -188,9 +188,8 @@ function escapeHTML(str) {
 }
 
 // =========================================
-// 13. FORM SUBMIT EVENT
-// =========================================
 // 13. FORM SUBMIT & ADD TASK EVENTS
+// =========================================
 function handleAddTask(e) {
     if (e) e.preventDefault();
 
